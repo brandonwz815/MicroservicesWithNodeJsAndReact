@@ -14,8 +14,8 @@ spec:
     spec: 
       containers:
         - name: auth
-          image: tiger2y/auth
-          imagePullPolicy: Never
+          image: us.gcr.io/ticketing-dev-302305/auth
+          # imagePullPolicy: Never
 ---
 apiVersion: v1
 kind: Service
