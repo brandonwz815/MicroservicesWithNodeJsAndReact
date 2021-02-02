@@ -1,3 +1,7 @@
+netstat -aon | findstr :80
+
+------ to use gcloud --------
+
 gcloud auth application-default login
 
 skaffold dev
