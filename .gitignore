@@ -4,3 +4,6 @@ auth/package-lock.json
 client/node_modules
 client/package-lock.json
 client/.next
+
+tickets/node_modules
+tickets/package-lock.json
