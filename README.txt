@@ -9,3 +9,9 @@ skaffold dev
 ------ to create secret -------
 
 kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdf
+
+------ to port-forward for nats streaming -------
+
+kubectl port-forward nats-depl-898f74f4b-fhqcr 4222:4222
+npm run publish
+npm run listen
