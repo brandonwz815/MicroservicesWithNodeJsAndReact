@@ -16,11 +16,15 @@ stan.on('connect', () => {
     process.exit();
   });
 
-  const options = stan.subscriptionOptions()
+  const options = stan
+    .subscriptionOptions()
     .setManualAckMode(true)
-    .setDeliverAllAvailable();
+    .setDeliverAllAvailable()
+    .setDurableName('accounting-service');
+    
   const subscription = stan.subscribe(
     'ticket:created',
+    'queue-group-name',
     options
   );
 
