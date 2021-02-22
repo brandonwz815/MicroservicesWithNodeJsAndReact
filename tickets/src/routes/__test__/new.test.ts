@@ -2,6 +2,8 @@ import request from 'supertest';
 import { app } from '../../app';
 import { Ticket } from '../../models/ticket';
 
+jest.mock('../../nats-wrapper');
+
 it('has a route handler listening to /api/tickets for post request', async () => {
   const response = await request(app)
     .post('/api/tickets')
@@ -68,7 +70,7 @@ it('creates a ticket with valid inputs', async () => {
   let tickets = await Ticket.find({});
   expect(tickets.length).toEqual(0);
 
-  const title =  'asfd';
+  const title = 'asfd';
   await request(app)
     .post('/api/tickets')
     .set('Cookie', global.signin())
