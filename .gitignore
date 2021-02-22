@@ -8,5 +8,8 @@ client/.next
 tickets/node_modules
 tickets/package-lock.json
 
+orders/node_modules
+orders/package-lock.json
+
 nats-test/node_modules
 nats-test/package-lock.json
